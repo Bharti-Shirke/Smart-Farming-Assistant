@@ -1,0 +1,29 @@
+.env
+**/.env
+venv/
+**/venv/
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+**/build/
+node_modules/
+.idea/
+.vscode/
+
+# Nested PlantVillage Git repository
+backend/data/plantvillage/.git/
+
+# Large PlantVillage dataset
+backend/data/plantvillage/
+
+# Local training datasets
+backend/data/Soil Dataset/
+
+# Local training datasets
+backend/data/Soil Dataset/

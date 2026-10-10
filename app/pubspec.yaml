@@ -1,0 +1,13 @@
+name: smart_farming
+description: Smart Farming Assistant
+environment: {sdk: ">=3.3.0 <4.0.0"}
+dependencies:
+  flutter: {sdk: flutter}
+  flutter_localizations: {sdk: flutter}
+  intl: any
+  http: ^1.2.0
+  shared_preferences: ^2.2.0
+  image_picker: ^1.0.7
+flutter:
+  generate: true
+  uses-material-design: true

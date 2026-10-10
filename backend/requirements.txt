@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+httpx
+pyjwt
+python-dotenv
+python-multipart
+scikit-learn
+pandas
+joblib
+pillow
+numpy

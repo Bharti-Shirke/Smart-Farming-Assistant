@@ -1,0 +1,12 @@
+{
+    "classes": [
+        "Alluvial soil",
+        "Black Soil",
+        "Clay soil",
+        "Red soil"
+    ],
+    "test_loss": 0.21506769955158234,
+    "test_accuracy": 0.9147058725357056,
+    "training_images": 976,
+    "test_images": 352
+}
