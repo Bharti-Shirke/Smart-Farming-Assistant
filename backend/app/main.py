@@ -56,11 +56,18 @@ async def weather(
 
     return result
 
+
 @app.get("/")
 def home():
     return {
         "message": "Smart Farming Assistant API is running"
     }
+
+
+@app.get("/healthz")
+def health_check():
+    return {"status": "healthy"}
+
 
 @app.post("/irrigation/auto")
 async def automatic_irrigation(
