@@ -34,14 +34,19 @@ app = FastAPI(
     version="1.0"
 )
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost", "http://127.0.0.1"],
-    allow_origin_regex=r"http://(localhost|127\.0\.0\.1):\d+",
+    allow_origins=[
+        "http://localhost",
+        "http://127.0.0.1",
+        "https://smart-farming-assistant-web.onrender.com",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 @app.get("/weather")
 async def weather(
