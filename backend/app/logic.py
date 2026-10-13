@@ -340,7 +340,7 @@ Farmer's question:
 """
 
     response = gemini_client.models.generate_content(
-        model="gemini-3.8-flash",
+        model=os.getenv("GEMINI_MODEL", "gemini-1.5-flash"),
         contents=prompt
     )
 
@@ -421,7 +421,7 @@ Instructions:
 """
 
     response = gemini_client.models.generate_content(
-        model="gemini-3.8-flash",
+        model=os.getenv("GEMINI_MODEL", "gemini-1.5-flash"),
         contents=prompt
     )
 

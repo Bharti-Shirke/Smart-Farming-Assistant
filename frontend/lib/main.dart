@@ -540,15 +540,19 @@ class _CropRecommendationScreenState
           loading = false;
         });
       }
+   
     } catch (e) {
+      debugPrint('Crop recommendation error: $e');
+
+      if (!mounted) return;
+
       setState(() {
-        errorMessage =
-            'Could not connect to the farming server.\n'
-            'Make sure FastAPI is running.';
+        errorMessage = 'Crop recommendation failed: $e';
         loading = false;
       });
     }
   }
+
 
   Widget inputField(
     String label,
