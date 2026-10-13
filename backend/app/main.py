@@ -182,12 +182,12 @@ def farming_assistant(message: str):
             "response": response
         }
 
-    except Exception:
+    except Exception as e:
+        print(f"AI assistant error: {type(e).__name__}: {e}", flush=True)
         raise HTTPException(
             status_code=502,
             detail="The AI assistant is temporarily unavailable. Please try again."
         )
-
 
 @app.post("/assistant/context-chat")
 async def context_farming_assistant(
