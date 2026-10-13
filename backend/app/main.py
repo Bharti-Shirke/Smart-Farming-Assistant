@@ -166,8 +166,9 @@ async def irrigation_recommendation(
         )
 
 #chatbot endpoint
+
 @app.post("/assistant/chat")
-async def farming_assistant(message: str):
+def farming_assistant(message: str):
     try:
         response = ask_farming_assistant(message)
 
@@ -176,11 +177,12 @@ async def farming_assistant(message: str):
             "response": response
         }
 
-    except Exception as e:
+    except Exception:
         raise HTTPException(
-            status_code=500,
-            detail=str(e)
+            status_code=502,
+            detail="The AI assistant is temporarily unavailable. Please try again."
         )
+
 
 @app.post("/assistant/context-chat")
 async def context_farming_assistant(
