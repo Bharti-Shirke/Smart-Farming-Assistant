@@ -190,7 +190,7 @@ def farming_assistant(message: str):
         )
 
 @app.post("/assistant/context-chat")
-async def context_farming_assistant(
+def context_farming_assistant(
     message: str,
     crop: str,
     latitude: float,
