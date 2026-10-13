@@ -11,3 +11,4 @@ joblib
 pillow
 numpy==2.5.3
 tensorflow==2.21.0
+google-genai
