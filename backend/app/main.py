@@ -215,10 +215,13 @@ async def context_farming_assistant(
         )
 
     except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=str(e)
-        )
+    import traceback
+    print("CONTEXT CHAT ERROR:", repr(e), flush=True)
+    traceback.print_exc()
+    raise HTTPException(
+        status_code=500,
+        detail="The farming assistant could not process your question."
+    )
 
     
 
